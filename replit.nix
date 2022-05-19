@@ -6,5 +6,6 @@
 		pkgs.gnumake
         pkgs.lua5_4
         pkgs.valgrind
+        pkgs.swig
 	];
 }
