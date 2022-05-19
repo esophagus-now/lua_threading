@@ -1,4 +1,4 @@
-all: thing.so clean-deps
+all: thread.so clean-deps
 
 CXX = clang++
 override CXXFLAGS += -g -O0 -Wno-everything -fPIC
@@ -18,11 +18,11 @@ DEPS = $(SRCS:.cpp=.d)
 
 include $(DEPS)
 
-thing.so: $(OBJS)
+thread.so: $(OBJS)
 	$(CXX) -shared $(CXXFLAGS) $(OBJS) -o "$@" -pthread
 
 clean:
-	rm -f $(OBJS) $(DEPS) thing.so
+	rm -f $(OBJS) $(DEPS) thread.so
 
 clean-deps:
 	rm -f $(DEPS)

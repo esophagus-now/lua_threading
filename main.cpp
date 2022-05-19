@@ -116,7 +116,7 @@ static luaL_Reg const mylib[] = {
 };
 
 extern "C"
-int luaopen_thing(lua_State *L) {
+int luaopen_thread(lua_State *L) {
     //Table with all the thread functions
     luaL_newlib(L, mylib);
 
